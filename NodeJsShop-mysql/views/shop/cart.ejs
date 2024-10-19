@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main>
+            <% if(products.length>0){ %>
+                <ul>
+                <%products.map((prod)=>{%>
+                
+                        <li>
+                            <div>
+                                <h3>title : <%= prod.productData.title %></h3>
+                                <p>price :  <%= prod.productData.price %></p>
+                                <p>qty :  <%= prod.qty %></p>
+                                <form action="/cart-delete-item" method="post">
+                                    <input type="hidden" name="productId" value="<%= prod.productData.id %>">
+                                    <input type="hidden" name="price" value="<%= prod.productData.price %>">
+                                    <button type="submit" class="btn">Delete</button>
+                                </form>
+                            </div>
+                            
+                            
+                        </li>
+
+                       
+
+                
+                
+            <%})%>
+
+
+              </ul>
+
+              <div>
+                totalPrice :  <%= totalPrice %>
+            </div>
+            <% } else{%>
+                <h1>Cart is Empty!!</h1>
+            <% } %>
+        </main>
+        <%- include('../includes/end.ejs') %>
