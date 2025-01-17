@@ -11,13 +11,20 @@
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
+    "@types/sequelize": "^4.28.20",
     "nodemon": "^1.18.3"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "connect-session-sequelize": "^7.1.7",
+    "csurf": "^1.10.0",
     "ejs": "^3.1.10",
     "express": "^4.16.3",
+    "express-session": "^1.18.1",
     "mysql2": "^3.11.3",
-    "nodejs-complete-guide": "file:"
+    "nodejs-complete-guide": "file:",
+    "sequelize": "^6.37.5",
+    "tedious": "^18.6.1"
   }
 }
